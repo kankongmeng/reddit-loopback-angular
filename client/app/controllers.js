@@ -1,4 +1,5 @@
 function RedditController($scope, Post) {
+
   $scope.posts = [];
   
   // Function to get all posts

@@ -130,26 +130,25 @@
         <p class="text-muted">&copy; 2017 Brian Kan Kong Meng</p>
       </div>
     </footer>
+    <!-- Google CDN Jquery.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap-maxlength.js -->
+    <script src="assets/js/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <!-- Apply maxlength() on all input fields which have a maxlength attribute -->
+    <script>
+    $(document).ready(function() {
+      $('input[maxlength]').maxlength();
+    });
+    </script>
     <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
-	<!-- Google CDN Jquery.js -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- bootstrap-maxlength.js -->
-	<script src="assets/js/bootstrap-maxlength/bootstrap-maxlength.js"></script>
-	<!-- Apply maxlength() on all input fields which have a maxlength attribute -->
-	<script>
-	$(document).ready(function() {
-		$('input[maxlength]').maxlength();
-	});
-	</script>
-    <!-- My app -->
     <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-animate.js"></script>
     <script src="vendor/angular-resource.js"></script>
     <script src="vendor/angular-ui-router.js"></script>
+    <!-- My app -->
     <script src="js/services/lb-services.js"></script>
-    <script src="app/controllers.js" charset="utf-8"></script>
-    <script src="app/app.js" charset="utf-8"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/app.js"></script>
 </body>
 
 </html>
