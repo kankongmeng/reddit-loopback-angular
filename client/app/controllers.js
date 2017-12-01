@@ -1,14 +1,19 @@
-function RedditController($scope, Post) {
-
+function RedditController($scope, $http) {
+  // Initializate variable
   $scope.posts = [];
   
   // Function to get all posts
   $scope.getAllPosts = function getAllPosts() {
-    Post
-      .find()
-      .$promise
-      .then(function(posts) {
-        $scope.posts = posts;
+    var url = 'http://127.0.0.1:3000/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem';
+ 
+    $http({
+      method: 'GET',
+      url: url
+    }).then(function successCallback(response) {
+        $scope.posts = response.data;
+      }, function errorCallback(error) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
       });
   };
 
@@ -48,10 +53,10 @@ function RedditController($scope, Post) {
     newPost.points = 0;
     
     // Create the new post:
-    Post
-      .create(newPost)
-      .$promise
-      .then(function() {
+    var url = "http://localhost:3000/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem";
+      
+    $http.post(url, newPost)
+      .success(function (response) {
         // Update posts
         $scope.getAllPosts();
         
@@ -62,10 +67,16 @@ function RedditController($scope, Post) {
         $scope.newPostForm.topic = '';
         $scope.showNewPostForm = false;
       
+        // Reset maxlength JQuery
         $(document).ready(function() {
           $("span").remove();
           $('input[maxlength]').maxlength();
         });
+        
+        // Show add post success message
+        alert("Congratz, you added a post with title ("+response.title+")");
+      })
+      .error(function (error) {
       });
   };
 

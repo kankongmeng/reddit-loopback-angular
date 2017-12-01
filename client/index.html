@@ -47,9 +47,10 @@
   <div class="jumbotron">
     <div class="container">
       <h2>A Simple Reddit Clone Demo</h2>
-      <p>Created With Loppback and AngularJS With Bootstrap</p>
+      <p>Created With Loppback, AngularJS And Bootstrap</p>
       <p><a ng-click="toggleNewPostForm()" class="btn btn-primary btn-lg" href="#" role="button">New Post</a></p>
     </div>
+    
     <div ng-show="showNewPostForm" class="container">
       <form ng-submit="createNewPost()" name="newPostForm" class="form-horizontal col-md-7 col-md-offset-2">
         <div class="form-group">
@@ -84,6 +85,7 @@
       </form>
     </div>
   </div>
+  
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -100,6 +102,7 @@
         </div>
       </div>
     </div>
+    
     <div class="row">
       <div class="col-md-12">
         <div ng-repeat="post in posts | orderBy: sortBy | filter: searchPosts" class="well cc-well">
@@ -125,28 +128,32 @@
         </div>
       </div>
     </div>
+    
     <footer class="footer">
       <div class="container">
         <p class="text-muted">&copy; 2017 Brian Kan Kong Meng</p>
       </div>
     </footer>
+    
     <!-- Google CDN Jquery.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- bootstrap-maxlength.js -->
-    <script src="assets/js/bootstrap-maxlength/bootstrap-maxlength.js"></script>
     <!-- Apply maxlength() on all input fields which have a maxlength attribute -->
+    <script src="assets/js/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <!-- Axios REST API support -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
     <script>
     $(document).ready(function() {
       $('input[maxlength]').maxlength();
     });
     </script>
+    
     <!-- Angular -->
     <script src="vendor/angular.js"></script>
     <script src="vendor/angular-animate.js"></script>
     <script src="vendor/angular-resource.js"></script>
     <script src="vendor/angular-ui-router.js"></script>
     <!-- My app -->
-    <script src="js/services/lb-services.js"></script>
     <script src="app/controllers.js"></script>
     <script src="app/app.js"></script>
 </body>

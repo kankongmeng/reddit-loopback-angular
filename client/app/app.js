@@ -1,3 +1,3 @@
 angular
-  .module('redditClone', ['ngAnimate', 'lbServices'])
+  .module('redditClone', ['ngAnimate'])
   .controller('RedditController', RedditController);
