@@ -1,5 +1,5 @@
 {
-  "name": "reddit-loopback-angular",
+  "name": "reddit-loopback-react-angular",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
@@ -65,5 +65,5 @@
     "url": ""
   },
   "license": "UNLICENSED",
-  "description": "reddit-loopback-angular"
+  "description": "reddit-loopback-react-angular"
 }
