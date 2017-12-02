@@ -52,6 +52,9 @@ Localhost: https://localhost:3000/explorer/ <br>
 ![Loopback API Explorer Page](https://raw.githubusercontent.com/kankongmeng/reddit-loopback-react-angular/master/screenshot/reddit-clone-api-explorer-main-screenshot.JPG)
 
 
+### Karma and ESLint Testing Result <br>
+![Karma and ESLint](https://raw.githubusercontent.com/kankongmeng/reddit-loopback-react-angular/master/screenshot/karma_start_and_run_lint_testing.JPG)
+
 ### Deploy?
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
