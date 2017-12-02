@@ -4,7 +4,8 @@ function RedditController($scope, $http) {
   
   // Function to get all posts
   $scope.getAllPosts = function getAllPosts() {
-    var url = 'http://127.0.0.1:3000/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem';
+    // Host come from utility.js
+    var url = host+'/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem';
  
     $http({
       method: 'GET',
@@ -52,8 +53,9 @@ function RedditController($scope, $http) {
     newPost.timestamp = new Date();
     newPost.points = 0;
     
+    // Host come from utility.js
     // Create the new post:
-    var url = "http://localhost:3000/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem";
+    var url = host+"/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem";
       
     $http.post(url, newPost)
       .success(function (response) {

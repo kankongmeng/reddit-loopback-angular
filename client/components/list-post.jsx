@@ -14,7 +14,8 @@ class RepeatModule extends Component {
   
   // Get all post from rest API
   getPostData() {
-    var url = 'http://127.0.0.1:3000/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem';
+    // Host come from utility.js
+    var url = host+'/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem';
     axios.get(url)
       .then(response => {
         this.setState({posts: response.data, loading: false});

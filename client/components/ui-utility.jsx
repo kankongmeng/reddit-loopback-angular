@@ -4,7 +4,7 @@ import React,{Component} from 'react';
 class TextBox extends Component {
   render() {
     return (
-      <input className='form-control input-margin' 
+      <input className='form-control' 
           name={this.props.name}
           type='text' 
           placeholder={this.props.name+' (maxLength=255)'}

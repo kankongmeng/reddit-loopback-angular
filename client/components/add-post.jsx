@@ -34,10 +34,10 @@ class PostForm extends Component {
       newPost.timestamp = new Date();
       newPost.points = 0;
       
-      var url = "http://localhost:3000/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem";
-      
-      var self = this;
+      // Host come from utility.js
+      var url = host+'/api/Posts?access_token=aGNF04XBPW8pbBS31WUb23Gu5B8FqHeTjCZ6Q06mur1RYUddK4eTT5i4Niqiefem';
       // Post to server
+      var self = this;
       axios.post(url, newPost)
         .then(function (response) {
           // Clear and hide the form
@@ -47,7 +47,13 @@ class PostForm extends Component {
             imageURL: '', 
             topic: ''
           }});
-          $('#showNewPostForm').toggle();
+          
+          // Re-render JQuery Stuff
+          $(document).ready(function() {
+            $('#showNewPostForm').toggle();
+            $("span").remove();
+            $('input[maxlength]').maxlength();
+          });
           
           // Show post successfully and trigger update to parent
           var	handleToUpdate = self.props.handleToUpdate;
