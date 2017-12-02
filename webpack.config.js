@@ -5,7 +5,9 @@ var BUILD_DIR = path.resolve(__dirname, 'client/dist');
 var APP_DIR = path.resolve(__dirname, 'client/components');
 
 var config = {
-  entry: APP_DIR + '/main.jsx',
+  entry: [
+      APP_DIR + '/main.jsx'
+  ],
   output: {
     path: BUILD_DIR,
     filename: 'build.js'
@@ -18,7 +20,12 @@ var config = {
         loader : 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true
+    })
+  ]
 };
 
 module.exports = config;
