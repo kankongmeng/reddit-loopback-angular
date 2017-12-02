@@ -1,6 +1,7 @@
 # reddit-loopback-react-angular
 
-This is the example of basic reddit clone application that created with LoopBack Framework 3.X, AngularJS1 and ReactJS ES6.
+Example of basic **Reddit Clone** application developed with **LoopBack Framework 3.X**, **AngularJS1** and **ReactJS ES6**.
+
 ### Features:
 * Maintain a list of topics and its upvotes/downvotes.
 * Allow the user to submit topics.
@@ -9,10 +10,10 @@ This is the example of basic reddit clone application that created with LoopBack
 * Always return a list of top 20 topics (sorted by upvotes, descending) on the homepage.
 * Design an in-memory data structure (shared by the same process as your application).
 * Code comments and documentation: For the key functionalities.
-* Implemented Karma-Jasmine TDD and BDD test.
+* Implemented Karma-Jasmine TDD and BDD (Auto Unit Test).
 * Responsive bootstrap design.
 * Code follow ESLint standards.
-* Implemented webpack-merge production enviroment setup.
+* Use webpack-merge for easily switching environment between production and development.
 * Support API explorer with Loopback Framework.
 * Support search post by title. (AngularJS)
 * Support filter by votes, title(A-Z), date. (AngularJS)
