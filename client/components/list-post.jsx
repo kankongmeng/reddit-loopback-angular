@@ -46,6 +46,12 @@ class RepeatModule extends Component {
     this.getPostData();
   }
   
+  // When image url not valid
+  onError(i, e) {
+    this.state.posts[i].imageURL = '../assets/images/noImage.png';
+    this.setState({posts: this.state.posts});
+  }
+  
   // Rending content
 	render() {
     var	handleToUpdate	=	this.handleToUpdate;
@@ -64,7 +70,7 @@ class RepeatModule extends Component {
             {/* Inline with the ternary operator inside the JSX block to append child component */}
             {i == 0 &&
               <div id="showNewPostForm" className="container">
-                <PostForm handleToUpdate = {handleToUpdate.bind(this)} />
+                <PostForm handleToUpdate = { handleToUpdate.bind(this) } />
                 <br/>
               </div>
             }
@@ -81,14 +87,14 @@ class RepeatModule extends Component {
       
             <div className="well cc-well">
               <div className="image-container" ng-animate="'animate'">
-                <img src={ post.imageURL } />
+                <img src={ post.imageURL } onError={ this.onError.bind(this, i) } />
               </div>
               
               <div className="post-info">
                 <h3>#{ i+1 } { post.title } | <span> </span>
-                  <i onClick={this.clickAdd.bind(this, i)} className="fa fa-thumbs-up green" aria-hidden="true"></i>
+                  <i onClick={ this.clickAdd.bind(this, i) } className="fa fa-thumbs-up green" aria-hidden="true"></i>
                   <span> </span>
-                  <i onClick={this.clickMinus.bind(this, i)} className="fa fa-thumbs-down red" aria-hidden="true"></i>
+                  <i onClick={ this.clickMinus.bind(this, i) } className="fa fa-thumbs-down red" aria-hidden="true"></i>
                 </h3>
                 
                 <h4><div className={(post.points > 0 ? 'green' : 'red')}>Treding: { post.points }</div></h4>

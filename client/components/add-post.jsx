@@ -70,17 +70,17 @@ class PostForm extends Component {
       return (
         <form onSubmit={this.onSubmit.bind(this)}>
           <TextBox name='title' 
-            value={this.state.form.title}
-            onChange={this.onChange.bind(this)}/>
+            value={ this.state.form.title }
+            onChange={ this.onChange.bind(this) }/>
           <TextBox name='author'
-            value={this.state.form.author}
-            onChange={this.onChange.bind(this)}/>
+            value={ this.state.form.author }
+            onChange={ this.onChange.bind(this) }/>
           <TextBox name='imageURL'
-            value={this.state.form.imageURL}
-            onChange={this.onChange.bind(this)}/>
+            value={ this.state.form.imageURL }
+            onChange={ this.onChange.bind(this) }/>
           <TextBox name='topic'
-            value={this.state.form.topic}
-            onChange={this.onChange.bind(this)}/>
+            value={ this.state.form.topic }
+            onChange={ this.onChange.bind(this) }/>
           <button className='btn btn-success' 
             type='submit'>Submit</button>
         </form>
