@@ -1,19 +1,21 @@
-describe('Utility Controller', function () {
-	beforeEach(angular.mock.module('utilityModule'));
-	var $controller
+'use strict';
 
-	beforeEach(inject(function (_$controller_) {
-			$controller = _$controller_;
-		}));
+describe('Utility Controller', function() {
+  beforeEach(angular.mock.module('utilityModule'));
+  var $controller;
 
-	describe('$scope', function () {
-		it('adds one', function () {
-			var $scope = {};
-			var controller = $controller('UtilityController', {
-					$scope : $scope
-				});
-			$scope.add();
-			expect($scope.count).toEqual(1);
-		})
-	})
-})
+  beforeEach(inject(function(_$controller_) {
+    $controller = _$controller_;
+  }));
+
+  describe('$scope', function() {
+    it('adds one', function() {
+      var $scope = {};
+      var controller = $controller('UtilityController', {
+        $scope: $scope,
+      });
+      $scope.add();
+      expect($scope.count).toEqual(1);
+    });
+  });
+});

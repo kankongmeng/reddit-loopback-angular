@@ -1,3 +1,4 @@
+'use strict';
 // Karma configuration
 // Generated on Wed Nov 29 2017 23:56:05 GMT+0800 (Malay Peninsula Standard Time)
 var webpack = require('webpack');
@@ -18,12 +19,11 @@ module.exports = function(config) {
       'spec/react-unit-test-example.js',
     ],
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'spec/react-unit-test-example.js': [ 'webpack', 'sourcemap' ]
+      'spec/react-unit-test-example.js': ['webpack', 'sourcemap'],
     },
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -33,12 +33,12 @@ module.exports = function(config) {
       devtool: 'inline-source-map',
       module: {
         loaders: [
-          { test: /\.js$/, loader: 'babel-loader' }
-        ]
-      }
+          {test: /\.js$/, loader: 'babel-loader'},
+        ],
+      },
     },
     webpackServer: {
-      noInfo: true //please don't spam the console when running in karma!
+      noInfo: true, //please don't spam the console when running in karma!
     },
     // web server port
     port: 9876,
@@ -57,6 +57,6 @@ module.exports = function(config) {
     singleRun: true,
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
-}
+    concurrency: Infinity,
+  });
+};

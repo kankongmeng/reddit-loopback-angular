@@ -1,3 +1,5 @@
+'use strict';
+
 var webpack = require('webpack');
 var path = require('path');
 
@@ -6,26 +8,26 @@ var APP_DIR = path.resolve(__dirname, 'client/components');
 
 var config = {
   entry: [
-      APP_DIR + '/main.jsx'
+    APP_DIR + '/main.jsx',
   ],
   output: {
     path: BUILD_DIR,
-    filename: 'build.js'
+    filename: 'build.js',
   },
-  module : {
-    loaders : [
+  module: {
+    loaders: [
       {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        loader : 'babel-loader'
-      }
-    ]
+        test: /\.jsx?/,
+        include: APP_DIR,
+        loader: 'babel-loader',
+      },
+    ],
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      minimize: true
-    })
-  ]
+      minimize: true,
+    }),
+  ],
 };
 
 module.exports = config;

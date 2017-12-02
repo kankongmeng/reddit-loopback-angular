@@ -1,5 +1,8 @@
-describe('app', function () {
-  it('loads without problems', function () {
+'use strict';
+
+describe('app', function() {
+  it('loads without problems', function() {
     require('../app');
   });
 });
+
