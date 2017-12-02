@@ -35,19 +35,19 @@ $ npm test
 
 
 ### Reddit Clone Angular Main Page <br>
-Live Demo: https://reddit-loopback-angular-react.herokuapp.com/ <br>
+Live Demo: https://reddit-loopback-react-angular.herokuapp.com/ <br>
 Localhost: https://localhost:3000 <br>
 ![Angular Page](https://raw.githubusercontent.com/kankongmeng/reddit-loopback-react-angular/master/screenshot/reddit-clone-angular-main-screenshot.JPG)
 
 
 ### Reddit Clone React Main Page <br>
-Live Demo: https://reddit-loopback-angular-react.herokuapp.com/react.html <br>
+Live Demo: https://reddit-loopback-react-angular.herokuapp.com/react.html <br>
 Localhost: https://localhost:3000 <br>
 ![React Page](https://raw.githubusercontent.com/kankongmeng/reddit-loopback-react-angular/master/screenshot/reddit-clone-react-main-screenshot.JPG)
 
 
 ### Reddit Clone Loopback API Explorer Page <br>
-Live Demo: https://reddit-loopback-angular-react.herokuapp.com/explorer/#/Post <br>
+Live Demo: https://reddit-loopback-react-angular.herokuapp.com/explorer/#/Post <br>
 Localhost: https://localhost:3000/explorer/ <br>
 ![Loopback API Explorer Page](https://raw.githubusercontent.com/kankongmeng/reddit-loopback-react-angular/master/screenshot/reddit-clone-api-explorer-main-screenshot.JPG)
 
