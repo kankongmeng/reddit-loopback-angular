@@ -12,7 +12,7 @@ var config = {
   ],
   output: {
     path: BUILD_DIR,
-    filename: 'build.js',
+    filename: 'react.build.js',
   },
   devtool: 'source-map',
   module: {
